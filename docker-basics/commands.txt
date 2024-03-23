@@ -1,0 +1,37 @@
+[Remember to remove this commands.txt file before creating the image.]
+
+Running an image from Docker Hub on a conatiner
+1. Pull the OS image
+    docker pull ubuntu
+2. Run the container
+    docker run -it ubuntu [it flag means interactive mode]
+'''
+Inside the ubuntu Conatiner
+root@6630a1f42e2c:/# ls
+bin   dev  home  lib32  libx32  mnt  proc  run   srv  tmp  var
+boot  etc  lib   lib64  media   opt  root  sbin  sys  usr
+root@6630a1f42e2c:/# cd home/ 
+root@6630a1f42e2c:/home# ls
+root@6630a1f42e2c:/home# mkdir hello_linux
+root@6630a1f42e2c:/home# ls
+hello_linux
+root@6630a1f42e2c:/home# cd hello_linux
+root@6630a1f42e2c:/home/hello_linux# touch hello-ubuntu.txt
+root@6630a1f42e2c:/home/hello_linux# ls
+hello-ubuntu.txt
+root@6630a1f42e2c:/home/hello_linux#
+'''
+3. Close/ kill the terminal 
+
+Building our own Docker image
+1. Create the app whose image we want to create in this case it's hello.js
+2. Create the Dockerfile using the 4 commands.
+3. Build the image
+    docker build -t docker-basics . [t indicates the tag]
+4. Check if the image is created
+    docker images
+5. To containerize this image 
+    docker run docker-basics
+6. To open this image in the shell
+    docker run -it docker-basics sh
+    node hello.js
