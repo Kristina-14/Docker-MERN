@@ -1,0 +1,42 @@
+1. Created the react app using vite
+    npm create vite@latest react-docker
+2. Created the Dockerfile for react-docker
+3. Built the react-docker image
+    docker build -t react-docker .
+4. Run this react-docker image
+    docker run react-docker     
+# Although this does show running but when we go to localhost 5173, it refuses to connect!!
+# Expose port ONLY informs docker that the container should listen to that specific port
+# But out localhost has absolutely no idea about it.
+# So we need to make use of a concept known as Port mapping(concept in Docker) 
+that allows us to map ports between the docker conatiners and the host.
+
+5. Port Mapping to make the localhost know about our application that it's running on a docker conatiner
+    docker run -p 5173:5173 react-docker
+#Still doesn't run. Coz we need to tell vite as well about the port
+
+6. Mention the host in packages.json and re-start the app[also stop the old container at 5173]
+    "dev": "vite --host"
+We need to rebuilt our image again & run it [using the --name flag]
+    docker build -t react-docker .
+    docker run --name reactDocker -p 5173:5173 react-docker
+
+7. To delete all the stopped conatiners in docker registry
+    docker conatiner prune 
+[WARNING!!! DON'T USE THIS COMMAND AS IT WILL DELETE ALL THE OLDER REQUIRED STOPPED CONATINERS OF OTHER APPS IN MY CASE]
+    docker rm <conatiner-name> --- to stop and delete any specific container.
+
+8. Since we are displaying the output from our containerized app so we need to re-built our conatiner everytime we make changes to our app
+!!!!!!!!!!PAINFUL
+so we'll mount our current working directory to the container instead(in our case it's the app.tsx)
+so that we can link our local chnages directly to our running container.
+    docker run --name reactDocker -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker
+pwd: represents the current working directory path
+-v: indicates the volume which will keep track of the changes
+-v /app/node_modules: create a new volume for the node modules directory within the conatiner 
+to ensure that the volume mount is available in its conatiner
+
+9. Login to docker and "push" the image to docker Hub
+    docker Login
+    docker tag react-docker kristina140699/react-docker [to create the tag]
+    docker push kristina140699/react-docker [to push the image into the repository]
