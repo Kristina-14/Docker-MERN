@@ -18,5 +18,6 @@
 </ul>
 
 <H2>Advanced Docker Components</H2>
+<ul>
 Docker compose 
-Docker swamp 
+Docker swamp </ul>
