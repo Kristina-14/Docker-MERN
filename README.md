@@ -36,3 +36,39 @@ Creating own docker image starts from a Special File called <b>Docker File</b>. 
 <ul>
 <li/> Docker compose 
 <li/> Docker swamp </ul>
+<p>
+<h2>Docker Compose</h2>
+Docker Compose is a tool for defining and running multi-container applications. It is the key to unlocking a streamlined and efficient development and deployment experience.
+
+Compose simplifies the control of your entire application stack, making it easy to manage services, networks, and volumes in a single, comprehensible YAML configuration file. Then, with a single command, you create and start all the services from your configuration file.
+
+Compose works in all environments; production, staging, development, testing, as well as CI workflows. It also has commands for managing the whole lifecycle of your application:</p>
+<ul>
+<li/>    Start, stop, and rebuild services
+<li/>    View the status of running services
+<li/>    Stream the log output of running services
+<li/>    Run a one-off command on a service
+</ul>
+<h2>Docker Compose Watch</h2>
+<p>Use watch to automatically update and preview your running Compose services as you edit and save your code.
+
+For many projects, this allows for a hands-off development workflow once Compose is running, as services automatically update themselves when you save your work.
+It allows to:
+<ul>
+<li/>    Sync
+<li/>    Rebuild
+<li/>    Sync-restart
+</ul>
+
+"watch" adheres to the following file path rules:
+<ul>
+<li/>    All paths are relative to the project directory
+<li/>    Directories are watched recursively
+<li/>    Glob patterns aren't supported
+<li/>    Rules from .dockerignore apply
+<ol>
+<li/>    Use ignore to defined additional paths to be ignored (same syntax)
+<li/>    Temporary/backup files for common IDEs (Vim, Emacs, JetBrains, & more) are ignored automatically
+<li/>    .git directories are ignored automatically</ol>
+</ul>
+You don't need to switch on watch for all services in a Compose project. In some instances, only part of the project, for example the Javascript frontend, might be suitable for automatic updates.</p>

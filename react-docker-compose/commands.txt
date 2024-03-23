@@ -1,0 +1,13 @@
+1. Create the react-docker-compose project
+    npm create vite@latest react-docker-compose
+2. Move the folder 
+    cd react-docker-compose    
+3. This command automatically creates the docker compose file
+    docker init
+    then make the settings 
+4. Update the Dockerfile and the compose.yaml
+5. run the docker-compose
+    docker compose up [DON'T RUN IT IN DETACHED MODE IT WILL NOT WORK]
+    BUT we get permission denied So, we need to close VS code and the run it as administrator.
+6. Update the package.json as follows:
+    "dev": "vite --host" [for the localhost to work]
