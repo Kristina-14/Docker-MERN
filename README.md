@@ -1,12 +1,14 @@
 # Docker-MERN
 <h2>Why use Docker?</h2>
-1. Consistency Across Environments
-2. Isolation
-3. Portability
-4. Lightweight
-5. Version Control
-6. Scalability
-7. DevOps Integration
+<ol>
+<li/>Consistency Across Environments
+<li/>Isolation
+<li/>Portability
+<li/>Lightweight
+<li/>Version Control
+<li/>Scalability
+<li/>DevOps Integration
+</ol>
 
 <H2>Important Docker Components</H2>
     There are primarily four components of Docker:
@@ -19,5 +21,5 @@
 
 <H2>Advanced Docker Components</H2>
 <ul>
-Docker compose 
-Docker swamp </ul>
+<li/> Docker compose 
+<li/> Docker swamp </ul>
