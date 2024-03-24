@@ -72,3 +72,11 @@ It allows to:
 <li/>    .git directories are ignored automatically</ol>
 </ul>
 You don't need to switch on watch for all services in a Compose project. In some instances, only part of the project, for example the Javascript frontend, might be suitable for automatic updates.</p>
+<h2>Docker Scout</h2>
+<p>
+Container images consist of layers and software packages, which are susceptible to vulnerabilities. These vulnerabilities can compromise the security of containers and applications.
+
+Docker Scout is a solution for proactively enhancing your software supply chain security. By analyzing your images, Docker Scout compiles an inventory of components, also known as a Software Bill of Materials (SBOM). The SBOM is matched against a continuously updated vulnerability database to pinpoint security weaknesses. <b>Simply go to the Docker Scout section in the Docker Engine and select the application which we want to check.<b>
+
+Docker Scout is a standalone service and platform that you can interact with using Docker Desktop, Docker Hub, the Docker CLI, and the Docker Scout Dashboard. Docker Scout also facilitates integrations with third-party systems, such as container registries and CI platforms.
+</p>

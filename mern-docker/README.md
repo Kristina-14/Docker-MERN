@@ -8,5 +8,5 @@
 <li>To see the changes we use compose watch
 <li>    docker compose watch
 <li>    Make chnages into the App.jsx and automatic changes will be seen in the compose watch
-<li>Install compose watch file
+<li>Install colors dependency.
 </ul>
