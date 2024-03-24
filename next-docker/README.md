@@ -48,7 +48,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 <li> Create a Database in the atlas
 <li> Click on Connect & Copy the url-with password
 <li> Install the VScode extenstion for the mongodb
-<li> Update the compose file connection -- DB_URL: mongodb+srv://krisharma1499:KKl4BPFnEBVLkCFV@topics.aiv6x6y.mongodb.net/
+<li> Update the compose file connection -- DB_URL: mongodb+srv://krisharma1499:<password>@topics.aiv6x6y.mongodb.net/
 <li> Copy paste the connection url into the mongodb feild on top. Press enter.
 <li> It will be connected automatically.
 </ul>
