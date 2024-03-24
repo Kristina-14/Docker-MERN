@@ -5,4 +5,8 @@
 (only 1 compose will be created for the whole project)
 <li> Run the compose file[make sure that the ports are free]
 <li>    docker compose up
+<li>To see the changes we use compose watch
+<li>    docker compose watch
+<li>    Make chnages into the App.jsx and automatic changes will be seen in the compose watch
+<li>Install compose watch file
 </ul>
