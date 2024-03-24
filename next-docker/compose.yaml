@@ -19,8 +19,7 @@ services:
           target: /app
           action: sync
     environment:
-      DB_URL:  mongodb+srv://sujata:rnZzJjIDr3bIDymV@cluster0.hnn88vs.mongodb.net/
-      #  mongodb+srv://krisharma1499:ipDDZtDxZ0zOIT5a@to-do-list.voe7fy6.mongodb.net/
-    
+      DB_URL: mongodb+srv://krisharma1499:KKl4BPFnEBVLkCFV@topics.aiv6x6y.mongodb.net/
+
 volumes:
   tasked:
